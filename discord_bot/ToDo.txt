@@ -1,0 +1,22 @@
+Corriger Bug >> erreur lors de la création de la base de donnée mainChannel si le serveur ne possède pas de systemchannel
+    -> dans ce cas valeur par defaut == none et envoie des msg à l'owner du serveur
+
+Ajout de la commande maintenance
+
+Ajout de la commande setup
+
+Delete les databases des serveurs qui ont kick le bot pendant que celui-ci etait off (permet aussi d'eviter de check la db de tout les serveurs, seulement les ID différents entre l'ancienne Db et les guilds présent à la connexion du bot)
+    -> Mettre en place une database(guildID) qui se mets à jours à la fin de la synchro des databases, guildCreate et guildDelete
+    -> au lancement du bot check si le bot est sur les memes serveurs que lorsqu'il a été eteint grace à la databases créer precedemment
+    -> delete la db de guild si le guildID est present dans l'ancien db à l'extinction du serveur mais plus au lancement
+    -> créer la db de guild si inversement
+
+Ajout du support option language en DM (Pas urgent, créer une db pour chaque utilisateur et non serveur)
+    -> Pas intéressant pour le moment
+
+Ajout de plusieurs système de point
+    Ajout d'une commande disponible toute les 24h sur un serveur >> possible avec des reacts
+    Ajout d'une commande disponible toute les 24h
+    Ajout d'une commande "création d'évenement" >> nom de l'event, but , durée, heure de départ
+
+Ajout de plusieurs leaderboard

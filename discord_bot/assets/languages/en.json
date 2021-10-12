@@ -1,0 +1,98 @@
+{
+    "lang": "en",
+    "events": {
+        "MessageCreate": {
+            "commandNotFound": "This command was not found. Try Again!",
+            "guildOnlyCommand": "I can not execute that command inside DMs!",
+            "notPerm": "You do not have this permissions: ",
+            "cooldownCommand" : "Please wait before reusing this command.\nTime left: ",
+            "noArgs": "You did not provide any arguments!",
+            "errorExecuteCommand": "There was an error trying to execute that command!"
+        }
+    }, 
+
+    "commands": {
+        "Miscellaneous": {
+            "invite" : {
+                "invite": "Invite me by using this link!\nhttps://discord.com/oauth2/authorize?client_id=871890209497833492&scope=bot&permissions=8",
+                "alertDM": "I have sent you a DM with the invite message!",
+                "cannotDM": "Looks like I can not send you a DM! Do you have DMs disabled?"
+            },
+            
+            "ping": {
+                "websocket": "Websocket heartbeat: ",
+                "roundtrip": "Roundtrip latency: "
+            },
+
+            "infobot": {
+                "names": "Name",
+                "desc": "Description",
+                "vers": "Version",
+                "APIVers": "API-Version",
+                "serv1": "On",
+                "serv2": "server(s)",
+                "date": "Published the",
+                "author": "Author"
+            }
+        },
+
+        "Task": {
+
+        },
+
+        "Utility": {
+            "help": {
+                "DMReply": "I have sent you a DM with the help message!",
+                "errorCanNotDM": "It seems like I can not DM you! Do you have DMs disabled?"
+            },
+
+            "settings": {
+                "settingNotFound": "This setting was not found.",
+                "errorExecuteCommand": "There was an error trying to execute that command!",
+                "prefixDesc": "Change the bot prefix on your server.",
+                "defaultPrefixDesc": "Active or deactivate the bot default prefix: `",
+                "channelDesc": "Select the main channel on your server for this bot.",
+                "languageDesc": "Select the bot language on your server.",
+
+                "prefix": {
+                    "cannotSetThisPrefix1": "You can not set the prefix **",
+                    "cannotSetThisPrefix2": "** if you have disabled the default prefix. You need first to turn him **ON**!",
+                    "success1": "Successfully set prefix to `",
+                    "success2": "`!",
+                    "infoPrefix1": "The prefix used on this server is `",
+                    "infoPrefix2": "`\nIf you want to change it write: `",
+                    "infoPrefix3": "settings prefix <NewPrefix>`"
+                },
+
+                "defaultPrefix": {
+                    "cannotDisablePrefix": "You can not disable this setting if you have not set a new prefix!",
+                    "notCorrectArg": "You did not provide a correct argument. You can choose between **ON** or **OFF**",
+                    "success1": "Successfully set defaultPrefix to `",
+                    "success2": "`!",
+                    "infoPrefixDefault1": "The value of *defaultPrefix* on this server is `",
+                    "infoPrefixDefault2": "`\nIf you want to change it write: `",
+                    "infoPrefixDefault3": "settings defaultPrefix <on or off>`\nBy default this value is **ON**.`"
+                },
+
+                "language": {
+                    "languageNotFound": "The language you specified was not found. Choose between **fr** or **en**.",
+                    "success1": "Successfully set language to `",
+                    "success2": "`!",
+                    "infoLanguage1": "The language used on this server is `",
+                    "infoLanguage2": "`\nIf you want to change it write: `",
+                    "infoLanguage3": "settings language <en or fr>`\nBy default the value is **en**.`"
+                },
+
+                "channel": {
+                    "successMainChannel": "Successfully set this channel *main channel*!",
+                    "successPart1": "Successfully set ",
+                    "successPart2": " *main channel*!",
+                    "cannotBeMainChannel": "This channel can not be the main channel. May be you do not specified a valid channel.",
+                    "infoMainChannel1": "The main channel used on this server is ",
+                    "infoMainChannel2": "!\nIf you want to change it write: `",
+                    "infoMainChannel3": "settings channel <#channel or channelID or this>`\nThe main channel is where all informations and alerts about tasks will be sent."
+                }
+            }
+        }
+    }
+}

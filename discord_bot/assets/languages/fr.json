@@ -1,0 +1,87 @@
+{
+    "lang": "fr",
+    "events": {
+        "MessageCreate": {
+            "commandNotFound": "Cette commande n'a pas été trouvée. Réessayer !",
+            "guildOnlyCommand": "Je ne peux pas exécuter cette commande dans les DM !",
+            "notPerm": "Vous n'avez pas ces autorisations : ",
+            "cooldownCommand" : "Veuillez patienter avant de réutiliser cette commande.\nTemps restant : ",
+            "noArgs": "Vous n'avez fourni aucun argument ! ",
+            "errorExecuteCommand": "Une erreur s'est produite lors de l'exécution de cette commande !"
+        }
+    }, 
+
+    "commands": {
+        "Miscellaneous": {
+            "invite" : {
+                "invite": "Invitez-moi en utilisant ce lien!\nhttps://discord.com/oauth2/authorize?client_id=871890209497833492&scope=bot&permissions=8",
+                "alertDM": "Je vous ai envoyé un DM avec le message d'invitation !",
+                "cannotDM": "Il semblerait que je ne puisse pas vous envoyer de DM ! Avez-vous les DM désactivés ?"
+            },
+
+            "ping": {
+                "websocket": "Websocket heartbeat: ",
+                "roundtrip": "Latence aller-retour: "
+            }
+        },
+        
+        "Task": {
+
+        },
+
+        "Utility": {
+            "help": {
+                "DMReply": "Je vous ai envoyé un DM avec le message d'invitation !",
+                "errorCanNotDM": "Il semblerait que je ne puisse pas vous envoyer de DM ! Avez-vous les DM désactivés ?"
+            },
+
+            "settings": {
+                "settingNotFound": "Ce paramètre n'a pas été trouvé.",
+                "errorExecuteCommand": "Une erreur s'est produite lors de l'exécution de cette commande !",
+                "prefixDesc": "Modifiez le préfixe du bot sur votre serveur.",
+                "defaultPrefixDesc": "Activez ou désactivez le préfixe par défaut du bot : `",
+                "channelDesc": "Sélectionnez le canal principal sur votre serveur pour ce bot.",
+                "languageDesc": "Sélectionnez le langage du bot sur votre serveur.",
+
+                "prefix": {
+                    "cannotSetThisPrefix1": "Vous ne pouvez pas définir le préfixe **",
+                    "cannotSetThisPrefix2": "** si vous avez désactivé le préfixe par défaut. Vous devez d'abord **l'allumer**!",
+                    "success1": "Le préfixe `",
+                    "success2": "`a été sélectionné avec succès!",
+                    "infoPrefix1": "Le préfixe utilisé sur ce serveur est `",
+                    "infoPrefix2": "`\nSi vous voulez le changer, écrivez : `",
+                    "infoPrefix3": "settings prefix <NewPrefix>`"
+                },
+
+                "defaultPrefix": {
+                    "cannotDisablePrefix": "Vous ne pouvez pas désactiver ce paramètre si vous n'avez pas défini de nouveau préfixe !",
+                    "notCorrectArg": "Vous n'avez pas fourni un argument correct. Vous pouvez choisir entre **ON** ou **OFF**",
+                    "success1": "Le préfixe par défaut a été mis sur : `",
+                    "success2": "` avec succès!",
+                    "infoPrefixDefault1": "La valeur de *defaultPrefix* sur ce serveur est `",
+                    "infoPrefixDefault2": "`\nSi vous voulez le changer, écrivez : `",
+                    "infoPrefixDefault3": "settings defaultPrefix <on or off>`\nPar défaut, cette valeur est **ON**.`"
+                },
+
+                "language": {
+                    "languageNotFound": "La langue que vous avez spécifiée est introuvable. Choisissez entre **fr** ou **en**.",
+                    "success1": "La langue `",
+                    "success2": "`a été sélectionné avec succès!",
+                    "infoLanguage1": "La langue utilisée sur ce serveur est `",
+                    "infoLanguage2": "`\nSi vous voulez le changer, écrivez : `",
+                    "infoLanguage3": "settings language <en or fr>`\nPar défaut, la valeur est **en**.`"
+                },
+
+                "channel": {
+                    "successMainChannel": "Ce salon a bien été définie *main channel*!",
+                    "successPart1": "Le salon ",
+                    "successPart2": " a bien été définie *main channel*!",
+                    "cannotBeMainChannel": "Ce canal ne peut pas être le canal principal. Peut-être que vous n'avez pas spécifié de canal valide.",
+                    "infoMainChannel1": "Le canal principal utilisé sur ce serveur est ",
+                    "infoMainChannel2": "!\nSi vous voulez le changer, écrivez : `",
+                    "infoMainChannel3": "settings channel <#channel or channelID or this>`\nLe canal principal est l'endroit où toutes les informations et alertes sur les tâches seront envoyées."
+                }
+            }
+        }
+    }
+}

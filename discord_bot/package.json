@@ -1,0 +1,24 @@
+{
+  "name": "taskstreak",
+  "version": "0.0.1",
+  "description": "I'm just checking if you are active on a server.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "main": "index.js"
+  },
+  "author": "SomGrap",
+  "license": "ISC",
+  "dependencies": {
+    "@keyv/sqlite": "^2.0.2",
+    "discord.js": "^13.2.0",
+    "fs": "^0.0.1-security",
+    "keyv": "^4.0.3",
+    "marque": "^1.0.1",
+    "python": "^0.0.4",
+    "sqlite3": "^4.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0"
+  }
+}
