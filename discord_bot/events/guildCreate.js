@@ -14,7 +14,7 @@ module.exports = {
         // Initialisation des données du serveur, utilise config.json
         await prefixes.set(guild.id, prefix);
         await defaultPrefixes.set(guild.id, defaultPrefix);
-        const guildSystemChannel = guild.systemChannelId;
+        const guildSystemChannel = guild.systemChannelId || null;
         await mainChannels.set(guild.id, guild.systemChannelId);
         await guildLanguages.set(guild.id, language);
         
