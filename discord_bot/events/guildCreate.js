@@ -1,4 +1,4 @@
-const { MessageEmbed } = require("discord.js");
+const { MessageEmbed, Guild } = require("discord.js");
 const { pumpkin } = require('../assets/colors.json');
 const { prefix, defaultPrefix, language } = require('../config.json');
 
@@ -17,23 +17,22 @@ module.exports = {
         const guildSystemChannel = guild.systemChannelId || null;
         await mainChannels.set(guild.id, guild.systemChannelId);
         await guildLanguages.set(guild.id, language);
-        
-        console.log(guildSystemChannel);
-
-        const channel = guild.client.channels.cache.get(guild.systemChannelId);
 
         // Message de présentation
         const newGuild = new MessageEmbed()
             .setTitle('Hello Guys')
             .setAuthor('TaskStreak')
-            .setDescription(`*I\'m new on this server, please be gentle!*\nYou can set up the bot correctly on your server with the command \`${prefix}setup\`\nBe carreful, if the bot leaves the server, all server data will be deleted.\n**Have Fun!**`)
+            .setDescription(`*I\'m new on your server, please be gentle!*\nYou can set up the bot correctly on your server with the command \`${prefix}setup\`\nBe carreful, if the bot leaves the server, all server data will be deleted.\n**Have Fun!**`)
+            .setFooter(`Hello ${guild.name}'s member(s)`)
             .setColor(`${pumpkin}`);
 
         try {
+            const channel = guild.client.channels.cache.get(guild.systemChannelId);
             return channel.send({ embeds: [newGuild] });
         } catch (error) {
-            const guildOwner = guild.owner;
-            console.log(guildOwner.toString());
+            await guild.members.fetch(guild.ownerId)
+                .then(guildMember => guildOwner = guildMember);
+            guildOwner.send({ embeds: [newGuild] });
         }
 
     },
