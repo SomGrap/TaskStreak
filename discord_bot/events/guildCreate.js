@@ -1,4 +1,4 @@
-const { MessageEmbed } = require("discord.js");
+const { MessageEmbed, Guild } = require("discord.js");
 const { pumpkin } = require('../assets/colors.json');
 const { prefix, defaultPrefix, language } = require('../config.json');
 
@@ -32,8 +32,7 @@ module.exports = {
         try {
             return channel.send({ embeds: [newGuild] });
         } catch (error) {
-            const guildOwner = guild.owner;
-            console.log(guildOwner.toString());
+            return console.log('error guildCreate event');
         }
 
     },
