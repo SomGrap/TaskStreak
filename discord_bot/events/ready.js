@@ -37,7 +37,8 @@ module.exports = {
             }
 
             if (MainChannel === undefined) {
-                await mainChannels.set(guild.id, guild.systemChannelId);
+                const guildSystemChannel = guild.systemChannelId || null;
+                await mainChannels.set(guild.id, guildSystemChannel);
                 console.log(`   -mainChannels synchronized for ${guild.name}-`);
             }
 

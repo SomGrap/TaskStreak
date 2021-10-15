@@ -15,7 +15,7 @@ module.exports = {
         await prefixes.set(guild.id, prefix);
         await defaultPrefixes.set(guild.id, defaultPrefix);
         const guildSystemChannel = guild.systemChannelId || null;
-        await mainChannels.set(guild.id, guild.systemChannelId);
+        await mainChannels.set(guild.id, guildSystemChannel);
         await guildLanguages.set(guild.id, language);
 
         // Message de présentation
