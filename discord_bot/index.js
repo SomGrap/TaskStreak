@@ -10,16 +10,16 @@ client.cooldowns = new Collection();
 client.settings = new Collection();
 
 // Initialisation des bases de données
-client.prefixes = new Keyv('sqlite://data/settings/prefixes.sqlite');
+client.prefixes = new Keyv('sqlite://data/serversSettings/prefixes.sqlite');
 client.prefixes.on('error', err => console.error('Keyv connection error:', err));
 
-client.defaultPrefixes = new Keyv('sqlite://data/settings/defaultPrefixes.sqlite');
+client.defaultPrefixes = new Keyv('sqlite://data/serversSettings/defaultPrefixes.sqlite');
 client.defaultPrefixes.on('error', err => console.error('Keyv connection error:', err));
 
-client.mainChannels = new Keyv('sqlite://data/settings/mainChannels.sqlite');
+client.mainChannels = new Keyv('sqlite://data/serversSettings/mainChannels.sqlite');
 client.mainChannels.on('error', err => console.error('Keyv connection error:', err));
 
-client.guildLanguages = new Keyv('sqlite://data/settings/guildLanguages.sqlite');
+client.guildLanguages = new Keyv('sqlite://data/serversSettings/guildLanguages.sqlite');
 client.guildLanguages.on('error', err => console.error('Keyv connection error:', err));
 
 // Initialisation des Handler
