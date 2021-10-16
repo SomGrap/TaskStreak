@@ -22,6 +22,9 @@ client.mainChannels.on('error', err => console.error('Keyv connection error:', e
 client.guildLanguages = new Keyv('sqlite://data/serversSettings/guildLanguages.sqlite');
 client.guildLanguages.on('error', err => console.error('Keyv connection error:', err));
 
+client.maintenanceMod = new Keyv('sqlite://data/botSettings/maintenanceMod.sqlite');
+client.maintenanceMod.on('error', err => console.error('Keyv connection error:', err));
+
 // Initialisation des Handler
 const eventFiles = fs.readdirSync('./events').filter(file => file.endsWith('.js'));
 const commandFolders = fs.readdirSync('./commands');
