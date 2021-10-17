@@ -7,7 +7,7 @@ module.exports = {
         
         client.user.setActivity('Launching...');
 
-        const { prefixes, defaultPrefixes, mainChannels, guildLanguages } = client;
+        const { prefixes, defaultPrefixes, mainChannels, guildLanguages, maintenanceMod } = client;
         
         // Initialisation des données des serveurs
         console.log('Data synchronization...');
@@ -49,7 +49,7 @@ module.exports = {
         }
 
         console.log(`Data are synchronized.\nTaskStreak logged in as ${client.user.tag}`);
-        client.user.setActivity('in development...');
+        client.user.setPresence({ activities: [{ name: 'in development...' }], status: 'dnd' });
 
     },
 };
