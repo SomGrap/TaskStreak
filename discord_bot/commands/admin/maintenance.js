@@ -7,10 +7,11 @@ module.exports = {
 
         const client = message.client;
 
+        // Récupération de la DB
 		const { maintenanceMod } = client;
-
         const mtncMod = await maintenanceMod.get(client.user);
 
+        // Si argument change le mod du bot
         if (args.length) {
 
             if (args[0] == 'on') {
@@ -20,17 +21,19 @@ module.exports = {
                 return message.channel.send('Succesfully set the bot in maintenance mod!');
 
             } else if (args[0] == 'off') {
-
+                
                 await maintenanceMod.set(client.user, false);
                 client.user.setPresence({ activities: [{ name: 'in development...' }], status: 'dnd' });
                 return message.channel.send('Succesfully set the bot in normal mod!');
 
             }
 
+            // Argument non valide
             return message.reply('You did not provide a valid argument for this command!');
 
         }
 
+        // Sinon informer de son état actuel
         return message.channel.send(`Maintenance Mod : ${mtncMod}`);
 
     },
