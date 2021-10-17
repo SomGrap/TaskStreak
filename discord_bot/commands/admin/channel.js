@@ -16,11 +16,11 @@ module.exports = {
         const arg = args.join(' ');
 
         channel.send(arg).then(sent => {
-            message.reply('The test is a success !');
+            return message.reply('The test is a success !');
         })
         .catch(err => {
-            message.reply('There was an error trying to execute that command!');
             console.log(err);
+            return message.reply('There was an error trying to execute that command!');
         });
 
     },

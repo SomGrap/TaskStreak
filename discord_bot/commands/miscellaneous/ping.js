@@ -15,7 +15,7 @@ module.exports = {
             .setTitle('Ping')
             .setColor(`${pumpkin}`);
 
-        message.channel.send('Pinging...').then(sent => {
+        return message.channel.send('Pinging...').then(sent => {
             pingEmbed.setDescription("Pong!\n" + language.websocket + message.client.ws.ping.toString() + "ms.\n" + language.roundtrip + (sent.createdTimestamp - message.createdTimestamp).toString() + "ms");
             sent.delete();
             message.channel.send({ embeds: [pingEmbed] });

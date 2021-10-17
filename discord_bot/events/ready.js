@@ -5,7 +5,7 @@ module.exports = {
     once: 'true',
     async execute(client) {
         
-        client.user.setActivity('Launching...');
+        client.user.setPresence({ activities: [{ name: 'Launching...' }], status: 'idle' });
 
         const { prefixes, defaultPrefixes, mainChannels, guildLanguages } = client;
         
@@ -49,7 +49,7 @@ module.exports = {
         }
 
         console.log(`Data are synchronized.\nTaskStreak logged in as ${client.user.tag}`);
-        client.user.setPresence({ activities: [{ name: 'in development...' }], status: 'dnd' });
+        return client.user.setPresence({ activities: [{ name: 'in development...' }], status: 'online' });
 
     },
 };
