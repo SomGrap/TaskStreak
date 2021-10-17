@@ -5,7 +5,7 @@ module.exports = {
     once: 'true',
     async execute(client) {
         
-        client.user.setActivity('Launching...');
+        client.user.setPresence({ activities: [{ name: 'Launching...' }], status: 'idle' });
 
         const { prefixes, defaultPrefixes, mainChannels, guildLanguages, maintenanceMod } = client;
         
