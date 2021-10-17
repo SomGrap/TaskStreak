@@ -62,7 +62,7 @@ module.exports = {
         if (mtncMod) {
             return client.user.setPresence({ activities: [{ name: 'maintenance...' }], status: 'idle' });
         }
-        return client.user.setPresence({ activities: [{ name: 'in development...' }], status: 'dnd' });
+        return client.user.setPresence({ activities: [{ name: 'in development...' }], status: 'online' });
 
     },
 };
