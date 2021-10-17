@@ -7,7 +7,7 @@ module.exports = {
         
         client.user.setActivity('Launching...');
 
-        const { prefixes, defaultPrefixes, mainChannels, guildLanguages, maintenanceMod } = client;
+        const { prefixes, defaultPrefixes, mainChannels, guildLanguages } = client;
         
         // Initialisation des données des serveurs
         console.log('Data synchronization...');
