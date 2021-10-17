@@ -60,9 +60,9 @@ module.exports = {
         console.log(`Data are synchronized.\nTaskStreak logged in as ${client.user.tag}`);
         const mtncMod = await maintenanceMod.get(client.user);
         if (mtncMod) {
-            client.user.setPresence({ activities: [{ name: 'maintenance...' }], status: 'idle' });
+            return client.user.setPresence({ activities: [{ name: 'maintenance...' }], status: 'idle' });
         }
-        client.user.setPresence({ activities: [{ name: 'in development...' }], status: 'dnd' });
+        return client.user.setPresence({ activities: [{ name: 'in development...' }], status: 'dnd' });
 
     },
 };
