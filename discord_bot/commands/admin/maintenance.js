@@ -23,7 +23,7 @@ module.exports = {
             } else if (args[0] == 'off') {
                 
                 await maintenanceMod.set(client.user, false);
-                client.user.setPresence({ activities: [{ name: 'in development...' }], status: 'dnd' });
+                client.user.setPresence({ activities: [{ name: 'in development...' }], status: 'online' });
                 return message.channel.send('Succesfully set the bot in normal mod!');
 
             }

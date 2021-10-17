@@ -1,4 +1,4 @@
-const { prefix, owner } = require('../config.json');
+const { prefix, owner, adminChannel } = require('../config.json');
 const { Collection } = require('discord.js');
 const en = require ('../assets/languages/en.json');
 const fr = require ('../assets/languages/fr.json');
@@ -7,7 +7,11 @@ module.exports = {
 	name: 'messageCreate',
 	async execute(message) {
 
-        const { cooldowns, prefixes, guildLanguages, defaultPrefixes } = message.client;
+        const { cooldowns, prefixes, guildLanguages, defaultPrefixes, maintenanceMod } = message.client;
+
+        // Maintenance Mod ?
+        const mtncMod = await maintenanceMod.get(message.client.user);
+        if (mtncMod && message.channel.id != adminChannel) return;
 
         // Ne rien faire si le msg a été envoyer par un bot
 		if (message.author.bot) return;
