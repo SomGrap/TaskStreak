@@ -58,7 +58,7 @@ module.exports = {
         }
 
         console.log(`Data are synchronized.\nTaskStreak logged in as ${client.user.tag}`);
-        client.user.setActivity('in development...');
+        client.user.setPresence({ activities: [{ name: 'in development...' }], status: 'dnd' });
 
     },
 };
