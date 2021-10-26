@@ -3,5 +3,6 @@
     "owner": "789456448052396082",
     "prefix": "t!",
     "defaultPrefix": true,
-    "language": "en"
+    "language": "en",
+    "adminChannel": "876457719870144592"
 }

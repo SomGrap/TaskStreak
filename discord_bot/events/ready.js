@@ -7,10 +7,10 @@ module.exports = {
         
         client.user.setPresence({ activities: [{ name: 'Launching...' }], status: 'idle' });
 
-        const { prefixes, defaultPrefixes, mainChannels, guildLanguages } = client;
+        const { prefixes, defaultPrefixes, mainChannels, guildLanguages, maintenanceMod } = client;
         
         // Initialisation des données des serveurs
-        console.log('Data synchronization...');
+        console.log('Servers Data synchronization...');
 
         const Guilds = client.guilds.cache.map(guild => guild.id);
 
@@ -48,7 +48,20 @@ module.exports = {
             }
         }
 
+        // Initialisation des bases de données du bot
+        console.log('Bot Data synchronization...');
+
+        const mtncMod = await maintenanceMod.get(client.user);
+        if (mtncMod === undefined) {
+            await maintenanceMod.set(client.user, false);
+            console.log(`   -maintenanceMod synchronized for ${client.user.tag}-`);
+        }
+
+
         console.log(`Data are synchronized.\nTaskStreak logged in as ${client.user.tag}`);
+        if (mtncMod) {
+            return client.user.setPresence({ activities: [{ name: 'maintenance...' }], status: 'idle' });
+        }
         return client.user.setPresence({ activities: [{ name: 'in development...' }], status: 'online' });
 
     },
