@@ -1,0 +1,15 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white; /* white */
+    background-color: #030313; /* black1 */
+}
+
+header {
+    width: 100%;
+    min-height: 100px;
+    height: 7,5%;
+    max-height: 244px;
+    background-color: #10101e; /* black2 */
+}
