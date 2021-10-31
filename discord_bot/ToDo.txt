@@ -1,4 +1,4 @@
-Nouvelle branch -> Ajout de la commande setup
+Nouvelle branch -> Ajout de la commande setup -> en cours
 
 Delete les databases des serveurs qui ont kick le bot pendant que celui-ci etait off (permet aussi d'eviter de check la db de tout les serveurs, seulement les ID différents entre l'ancienne Db et les guilds présent à la connexion du bot)
     -> Mettre en place une database(guildID) qui se mets à jours à la fin de la synchro des databases, guildCreate et guildDelete
